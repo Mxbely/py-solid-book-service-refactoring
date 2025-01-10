@@ -1,6 +1,6 @@
-from displays import DisplayBookConsole, DisplayBookReverse
-from prints import PrintBookConsole, PrintBookReverse
-from serializers import SerializeBookJson, SerializeBookXml
+from app.displays import DisplayBookConsole, DisplayBookReverse
+from app.prints import PrintBookConsole, PrintBookReverse
+from app.serializers import SerializeBookJson, SerializeBookXml
 
 
 def get_printer(cmd):

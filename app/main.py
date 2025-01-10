@@ -1,10 +1,5 @@
-from get_commands import get_display, get_printer, get_serializer
-
-
-class Book:
-    def __init__(self, title: str, content: str):
-        self.title = title
-        self.content = content
+from app.get_commands import get_display, get_printer, get_serializer
+from app.book import Book
 
 
 def main(book: Book, commands: list[tuple[str, str]]) -> None | str:
