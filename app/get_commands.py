@@ -1,9 +1,9 @@
-from app.displays import DisplayBookConsole, DisplayBookReverse
-from app.prints import PrintBookConsole, PrintBookReverse
-from app.serializers import SerializeBookJson, SerializeBookXml
+from app.displays import DisplayBookConsole, DisplayBookReverse, Display
+from app.prints import PrintBookConsole, PrintBookReverse, Print
+from app.serializers import SerializeBookJson, SerializeBookXml, Serialize
 
 
-def get_printer(cmd):
+def get_printer(cmd: str) -> Print:
     commands = {
         "console": PrintBookConsole(),
         "reverse": PrintBookReverse(),
@@ -11,7 +11,7 @@ def get_printer(cmd):
     return commands[cmd]
 
 
-def get_display(cmd):
+def get_display(cmd: str) -> Display:
     commands = {
         "console": DisplayBookConsole(),
         "reverse": DisplayBookReverse(),
@@ -19,7 +19,7 @@ def get_display(cmd):
     return commands[cmd]
 
 
-def get_serializer(cmd):
+def get_serializer(cmd: str) -> Serialize:
     commands = {
         "json": SerializeBookJson(),
         "xml": SerializeBookXml(),
